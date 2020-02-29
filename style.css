@@ -1,98 +1,110 @@
-html {
-  font-size: 10px;
+:root {
+  --main-bg-color: #CACAEA;
+  --main-txt-color: #041036;
+  font-size: 90%;
 }
+
+* {
+  color:  var(--main-txt-color);
+  box-sizing: border-box;
+  font-size: 90%;
+  }
 
 body {
-  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.6rem;
+  min-width: 340px;
+  background-color: var(--main-bg-color);
   line-height: 1.5;
-  text-align: center;
-  color:   #393940   ;
-  margin: 0;
-  background-color: #7395AE ;
 }
 
-h1 {
-  font-size: 4rem;
-  margin-bottom: 0;
-}
-
-@media (max-width: 460px) {
-  h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-  }
-}
-
-h2 {
-  font-size: 3.25rem;
-}
-
-h3 {
-  font-size: 2.4rem;
-}
-
-h5 {
-  font-size: 1.2rem;
-}
-
-a {
-  color:   #333847 ;
-}
-
-a:visited {
-  color:  #454c61 ;
-}
-
-#main {
-  margin: 30px 8px;
-  padding: 15px;
-  border-radius: 5px;
-  background: #7395AE;
-}
-
-@media (max-width: 460px) {
-  #main {
-    margin: 0;
-  }
-}
-
-img {
-  max-width: 100%;
-  display: block;
+nav {
+  position: fixed;
+  min-width: 340px;
+  top: 0px;
+  left: 0px;
+  width: 340px;
   height: auto;
-  margin: 0 auto;
+  padding: 0;
+  margin: 10px 10px 0;
+  text-align: left;
+  background-color: #FF9B00; 
 }
 
-#img-div {
-  background: #557A95;
+header {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+ header, footer {
+  background-color: #FF9B00;
   padding: 10px;
-  margin: 0;
+  
 }
 
-#img-caption {
-  margin: 15px 0 5px 0;
+#main-doc-header{
+  text-align: left;
+  margin: 0px;
+  
 }
 
-@media (max-width: 460px) {
-  #img-caption {
-    font-size: 1.4rem;
-  }
+#navbar ul {
+  border-top: 4px double var(--main-txt-color);
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-#headline {
-  margin: 50px 0;
+#navbar li { 
+  list-style: none;
+  position: relative;
+  width: 100%;
+  font-size: 2em;
+}
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 350px;
+  padding: 20px;
+  margin-bottom: 310px;  
+}
+
+section article {
+  font-size: 2em;
+}
+
+a.nav-link:link, a.nav-link:visited {
+ text-decoration: none;
+ display: inline-block;
+
+}
+
+a.nav-link:hover, a.nav-link:active {
+  background-color: #ffc161;
+}
+
+footer {
+  font-size: 0.9em;
   text-align: center;
 }
 
-ul {
-  max-width: 550px;
-  margin: 0 auto 50px auto;
-  text-align: left;
-  line-height: 1.6;
-}
-
-li {
-  margin: 16px 0;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  nav {  
+  width: 100%;
+  max-height:275px;
+    position: absolute;
+  }
+   #navbar ul {    
+    height: 207px;
+  }
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 275px;
+  }
 }
